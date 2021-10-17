@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('usuarios', 'UsuarioController');
+
+Route::resource('livros', 'LivroController');
+
+Route::resource('inicials', 'InicialController');
+
+Route::resource('historicos', 'HistoricoController');
