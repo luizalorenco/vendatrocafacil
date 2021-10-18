@@ -29,7 +29,7 @@
         body {
             font-family: "Nunito", sans-serif;
             font-size: 0.9rem;
-            background-color: lightgrey;
+            background-color: lightblue;
         }
     </style>
     @stack('css')

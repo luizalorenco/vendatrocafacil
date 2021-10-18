@@ -1,6 +1,6 @@
-@extends('historicos.layout')
+@extends('logins.layout')
 
-@section('title',__($historico->nome . ': CRUD Laravel'))
+@section('title',__($login->nome . ': CRUD Laravel'))
 
 @push('css')
 <style>
@@ -23,8 +23,8 @@ table th{
             <div class="card">
                 <div class="card-header">
                     <div class="d-flex justify-content-between w-100">
-                        <span><span class="text-info">{{$historico->nome}}</span>: (@lang('CRUD Laravel'))</span>
-                        <a href="{{ url('historicos') }}" class="btn-info btn-sm">
+                        <span><span class="text-info">{{$login->nome}}</span>: (@lang('CRUD Laravel'))</span>
+                        <a href="{{ url('logins') }}" class="btn-info btn-sm">
                             <i class="fa fa-arrow-left"></i> @lang('Voltar')
                         </a>
                     </div>
@@ -41,33 +41,32 @@ table th{
                         <tbody>
                         <tr>
                           <th align="left"><strong>ID:</strong></th>
-                          <th align="left">{{$historico->id}}</th>
+                          <th align="left">{{$login->id}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Produto')</strong>:</th>
-                            <th align="left">{{$historico->produto}}</th>
+                            <th align="left"><strong>@lang('Nome')</strong>:</th>
+                            <th align="left">{{$login->nome}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Valor')</strong>:</th>
-                            <th align="left">{{$historico->valor}}</th>
+                            <th align="left"><strong>@lang('Email')</strong>:</th>
+                            <th align="left">{{$login->email}}</th>
                           </tr>
                           <tr>
                           <tr>
-                            <th align="left"><strong>@lang('Data da Compra')</strong>:</th>
-                            <th align="left">{{$historico->data_compra}}</th>
+                            <th align="left"><strong>@lang('Senha')</strong>:</th>
+                            <th align="left">{{$login->senha}}</th>
                         </tr>
                         <tr>
-                            <th align="left"><strong>@lang('Data da Entrega')</strong>:</th>
-                            <th align="left">{{$historico->data_entrega}}</th>
+                            <th align="left"><strong>@lang('Confirmar')</strong>:</th>
+                            <th align="left">{{$login->confirmar}}</th>
                           </tr>
-                          
                           <tr>
                             <th align="left"><strong>@lang('Adicionado')</strong>:</th>
-                            <th align="left">{{$historico->created_at}}</th>
+                            <th align="left">{{$login->created_at}}</th>
                           </tr>
                           <tr>
                               <th align="left"><strong>@lang('Atualizado')</strong>:</th>
-                              <th align="left">{{$historico->updated_at}}</th>
+                              <th align="left">{{$login->updated_at}}</th>
                           </tr>
                         </table>
                 </div>

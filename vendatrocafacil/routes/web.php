@@ -24,3 +24,7 @@ Route::resource('livros', 'LivroController');
 Route::resource('inicials', 'InicialController');
 
 Route::resource('historicos', 'HistoricoController');
+
+Route::resource('logins', 'LoginController');
+
+Route::resource('comprass', 'ComprasController');

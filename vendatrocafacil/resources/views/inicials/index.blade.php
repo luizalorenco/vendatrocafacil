@@ -4,9 +4,8 @@
 
 @push('css')
 <style>
-    li{
-        display:inline-block;
-       
+ li{
+        display:inline-block;      
 	text-align: center;
 	width: 480px;
 	vertical-align: top;
@@ -18,18 +17,30 @@
     }
 
     
-li:hover{
+  li:hover{
     color: #C78C19;
 }
 
-li:hover h2 {
+.prod li:hover h2 {
     font-size: 34px;
 }
 
-li:active{
+.prod li:active{
 	border-color:#088C19;
 	font-size: 
 }
+
+.produto-descricao{
+	font-size: 18px;
+}
+
+.produto-preco{
+	font-size: 22px;
+	font-weight: bold;
+	margin: 10px 0 0;
+	margin-top: 10px;
+}
+
 
 </style>
 @endpush
@@ -40,9 +51,9 @@ li:active{
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                <div style="background-color: lightblue">
-                    <div class="d-flex justify-content-between w-100">
-                        <span><strong>@lang('Venda e Troca Facil')</strong></span>
+                <div class="d-flex justify-content-between w-100">
+
+                        <span><strong><font size="5" color="blue">@lang('Venda e Troca Facil')</font></strong></span>
 
                         <div id="divBusca">
   
@@ -60,17 +71,24 @@ li:active{
                     </div>
                     @endif
 
+
                     <table class="table table-striped">
                         <thead>
-                            <tr>
-                                
-                                <td bgcolor="lightblue"><a href="usuarios">@lang('Perfil')</a></td>
-                                <td bgcolor="lightblue">@lang('Compras')</td>
-                                <td bgcolor="lightblue"><a href="historicos">@lang('Historico')</td>
-                                <td bgcolor="lightblue">@lang('Vender')</td>
-                 
-                            </tr>
+                        <tr  style="border: dashed">
+
+
+<td bgcolor="lightblue"><a href="usuarios"><strong><font size="3" color="blue">@lang('Perfil')</font></strong></a></td>
+<td bgcolor="lightblue"><a href="comprass"><strong><font size="3" color="blue">@lang('Compras')</font></strong></td>
+<td bgcolor="lightblue"><a href="historicos"><strong><font size="3" color="blue">@lang('Historico')</font></strong></td>
+<td bgcolor="lightblue"><a href="http://127.0.0.1:8000/livros/create"><strong><font size="3" color="blue">@lang('Vender ou Trocar')</font></strong></a></td> 
+
+</tr>
                         </thead>
+
+
+
+
+
                         <tbody>
                             @foreach($inicials as $inicial)
                             <tr>
@@ -110,44 +128,44 @@ li:active{
 
 <main>
 		<ul>
-		 <li style="border: solid" >
+		 <li class="prod" style="border: solid" >
 			<h2>Livro 1</h2>
-		    <img src="cabelo.jpg">
-		    <p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir</p>
+		    <img src="">
+		    <p class="produto-descricao">Livro 1, novo</p>
 			<p class="produto-preco">R$ 25,00</p>
 </li>
-         <li>
+         <li class="prod" style="border: solid">
 		 	<h2>Livro 2</h2>
-		  <img src="barba.jpg">
-		    <p class="produto-descricao">Corte e desenho profissional de barba</p>
-			<p class="produto-preco">R$ 18,00</p>
+		  <img src="">
+		    <p class="produto-descricao">Livro 2, usado, em perfeitas condições</p>
+			<p class="produto-preco">Troca</p>
 			</li>
-		 <li>
+		 <li class="prod" style="border: solid">
 		 	<h2>Livro 3</h2>
-		  <img src="vabelo+barba.jpg">
-		    <p class="produto-descricao">Pacote completo de barba e cabelo</p>
-			<p class="produto-preco">R$ 35,00</p>
+		  <img src="">
+		    <p class="produto-descricao">Livro 3, usado, pequenas marcas de uso</p>
+			<p class="produto-preco">Troca</p>
 			</li>
 		</ul>
 </ul>
 
 <ul>
-		 <li style="border: solid">
-			<h2>Livro 1</h2>
-		    <img src="cabelo.jpg">
-		    <p class="produto-descricao">Na tesoura ou máquina, como o cliente preferir</p>
-			<p class="produto-preco">R$ 25,00</p>
+		 <li  class="prod" style="border: solid">
+			<h2>Livro 4</h2>
+		    <img src="">
+		    <p class="produto-descricao">Livro 4, usado, ótimas condiçoes</p>
+			<p class="produto-preco">Troca</p>
 		 </li>
-         <li>
-		 	<h2>Livro 2</h2>
-		  <img src="barba.jpg">
-		    <p class="produto-descricao">Corte e desenho profissional de barba</p>
+         <li  class="prod" style="border: solid">
+		 	<h2>Livro 5</h2>
+		  <img src="">
+		    <p class="produto-descricao">Livro 5, usado</p>
 			<p class="produto-preco">R$ 18,00</p>
 			</li>
-		 <li>
-		 	<h2>Livro 3</h2>
-		  <img src="vabelo+barba.jpg">
-		    <p class="produto-descricao">Pacote completo de barba e cabelo</p>
+		 <li  class="prod" style="border: solid">
+		 	<h2>Livro 5</h2>
+		  <img src="">
+		    <p class="produto-descricao">Livro 5, novo</p>
 			<p class="produto-preco">R$ 35,00</p>
 			</li>
 		</ul>

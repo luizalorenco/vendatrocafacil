@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Historico;
+use App\Login;
 use Illuminate\Http\Request;
 
-class HistoricoController extends Controller
+class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,12 @@ class HistoricoController extends Controller
      */
     public function index()
     {
-        $historicos = historico::all();
-        // chamando a tela e enviando o objeto $historicos
-        // como parâmetro
-        return view('historicos.index', compact('historicos'));
+        
+            $logins = login::all();
+            // chamando a tela e enviando o objeto $logins
+            // como parâmetro
+            return view('logins.index', compact('logins'));
+        
     }
 
     /**
@@ -44,10 +46,10 @@ class HistoricoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Historico  $historico
+     * @param  \App\Login  $login
      * @return \Illuminate\Http\Response
      */
-    public function show(Historico $historico)
+    public function show(Login $login)
     {
         $login = login::findOrFail($id);
         // retornando a tela de visualização com o
@@ -58,10 +60,10 @@ class HistoricoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Historico  $historico
+     * @param  \App\Login  $login
      * @return \Illuminate\Http\Response
      */
-    public function edit(Historico $historico)
+    public function edit(Login $login)
     {
         //
     }
@@ -70,10 +72,10 @@ class HistoricoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Historico  $historico
+     * @param  \App\Login  $login
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Historico $historico)
+    public function update(Request $request, Login $login)
     {
         //
     }
@@ -81,10 +83,10 @@ class HistoricoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Historico  $historico
+     * @param  \App\Login  $login
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Historico $historico)
+    public function destroy(Login $login)
     {
         //
     }

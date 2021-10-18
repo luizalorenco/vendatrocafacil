@@ -249,10 +249,10 @@
         </div>
         <div class="menu-perfil">
             <ul>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-bullhorn"></i>Minhas Compras</a></li>
+                <li><a href="comprass" title=""><i class="icono-perfil fas fa-bullhorn"></i>Minhas Compras</a></li>
                 <li><a href="#" title=""><i class="icono-perfil fas fa-info-circle"></i>Meus endereços</a></li>
                 <li><a href="#" title=""><i class="icono-perfil fas fa-grin"></i>Minhas formas de pagamento</a></li>
-                <li><a href="#" title=""><i class="icono-perfil fas fa-camera"></i>Historico</a></li>
+                <li><a href="historicos" title=""><i class="icono-perfil fas fa-camera"></i>Historico</a></li>
             </ul>
         </div>
     </div>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Historico;
+use App\Compras;
 use Illuminate\Http\Request;
 
-class HistoricoController extends Controller
+class ComprasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,10 @@ class HistoricoController extends Controller
      */
     public function index()
     {
-        $historicos = historico::all();
-        // chamando a tela e enviando o objeto $historicos
+        $comprass = compras::all();
+        // chamando a tela e enviando o objeto $comprass
         // como parâmetro
-        return view('historicos.index', compact('historicos'));
+        return view('comprass.index', compact('comprass'));
     }
 
     /**
@@ -44,24 +44,24 @@ class HistoricoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Historico  $historico
+     * @param  \App\Compras  $compras
      * @return \Illuminate\Http\Response
      */
-    public function show(Historico $historico)
+    public function show(Compras $compras)
     {
-        $login = login::findOrFail($id);
+        $compras = compras::findOrFail($id);
         // retornando a tela de visualização com o
         // objeto recuperado
-        return view('logins.show',compact('login'));
+        return view('comprass.show',compact('compras'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Historico  $historico
+     * @param  \App\Compras  $compras
      * @return \Illuminate\Http\Response
      */
-    public function edit(Historico $historico)
+    public function edit(Compras $compras)
     {
         //
     }
@@ -70,10 +70,10 @@ class HistoricoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Historico  $historico
+     * @param  \App\Compras  $compras
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Historico $historico)
+    public function update(Request $request, Compras $compras)
     {
         //
     }
@@ -81,10 +81,10 @@ class HistoricoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Historico  $historico
+     * @param  \App\Compras  $compras
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Historico $historico)
+    public function destroy(Compras $compras)
     {
         //
     }

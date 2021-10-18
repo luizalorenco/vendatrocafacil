@@ -1,4 +1,4 @@
-@extends('historicos.layout')
+@extends('comprass.layout')
 
 @section('title',__('(CRUD Laravel)'))
 
@@ -33,31 +33,31 @@
                                 <td>@lang('Produto')</td>
                                 <td>@lang('Valor')</td>
                                 <td>@lang('Data da Compra')</td>
-                                <td>@lang('Data da Entrega')</td>
+                                <td>@lang('Previsão de Entrega')</td>
                     
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($historicos as $historico)
+                            @foreach($comprass as $compras)
                             <tr>
-                                <td>{{$historico->id}}</td>
-                                <td>{{$historico->produto}}</td>
-                                <td>{{$historico->valor}}</td>
-                                <td>{{$historico->data_compra}}</td>
-                                <td>{{$historico->data_entrega}}</td>
+                                <td>{{$compras->id}}</td>
+                                <td>{{$compras->produto}}</td>
+                                <td>{{$compras->valor}}</td>
+                                <td>{{$compras->data_compra}}</td>
+                                <td>{{$compras->previsão_entrega}}</td>
                            
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <a href="{{ route('historicos.show', $historico->id)}}"
+                                    <a href="{{ route('comprass.show', $compras->id)}}"
                                         class="btn btn-info btn-sm">@lang('Abrir')
                                     </a>
                                 </td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <a href="{{ route('historicos.edit', $historico->id)}}"
+                                    <a href="{{ route('comprass.edit', $compras->id)}}"
                                         class="btn btn-primary btn-sm">@lang('Editar')
                                     </a>
                                 </td>
                                 <td class="text-center p-0 align-middle" width="70">
-                                    <form action="{{ route('historicos.destroy', $historico->id)}}" method="post">
+                                    <form action="{{ route('comprass.destroy', $compras->id)}}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger btn-sm" type="submit">Excluir</button>
