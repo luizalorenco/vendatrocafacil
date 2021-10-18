@@ -243,7 +243,7 @@
                 </ul>
             </div>
             <div class="opcciones-perfil">
-                <button type="">Mensagens</button>
+                <button type=""><a href="chats"><font color="white">Mensagens</font></a></button>
                 
             </div>
         </div>

@@ -28,3 +28,5 @@ Route::resource('historicos', 'HistoricoController');
 Route::resource('logins', 'LoginController');
 
 Route::resource('comprass', 'ComprasController');
+
+Route::resource('chats', 'ChatController');
